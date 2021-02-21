@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import Heading from 'components/Heading'
-import Container from 'components/Container'
+import Heading from 'components/Heading';
+import Container from 'components/Container';
 
-import * as S from './styles'
-import { SectionAboutProjectProps } from 'types/api'
-import { getImageUrl } from 'utils/getImageUrl'
+import * as S from './styles';
+import { SectionAboutProjectProps } from 'types/api';
+import { getImageUrl } from 'utils/getImageUrl';
 
 const SectionAboutProject = ({
   description,
@@ -13,7 +13,6 @@ const SectionAboutProject = ({
   title
 }: SectionAboutProjectProps) => (
   <S.Wrapper>
-    {console.log(description)}
     <Container>
       <S.Container>
         <S.Image src={getImageUrl(media.url)} alt={media.alternativeText} />
@@ -24,6 +23,6 @@ const SectionAboutProject = ({
       </S.Container>
     </Container>
   </S.Wrapper>
-)
+);
 
-export default SectionAboutProject
+export default SectionAboutProject;
