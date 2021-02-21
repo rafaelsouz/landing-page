@@ -4,7 +4,7 @@ import Button from 'components/Button';
 import { gaEvent } from 'utils/ga';
 
 import * as S from './styles';
-import { pricingBoxProps } from 'types/api';
+import { PricingBoxProps } from 'types/api';
 
 const onClick = () =>
   gaEvent({ action: 'click', category: 'buy', label: 'pricing box button' });
@@ -15,7 +15,7 @@ const PricingBox = ({
   numberInstallments,
   priceInstallment,
   button
-}: pricingBoxProps) => (
+}: PricingBoxProps) => (
   <S.Box>
     <S.Prices>
       <S.FullPrice>

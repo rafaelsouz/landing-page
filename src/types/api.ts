@@ -1,8 +1,3 @@
-export type LogoProps = {
-  alternativeText: string;
-  url?: string;
-};
-
 export type TechIcon = {
   title: string;
   icon: {
@@ -10,11 +5,18 @@ export type TechIcon = {
   };
 };
 
-export type Modules = {
+export type Module = {
   title: string;
   subtitle: string;
   description: string;
 };
+
+export type Image = {
+  alternativeText: string;
+  url: string;
+};
+
+export type LogoProps = Image;
 
 export type HeaderProps = {
   title: string;
@@ -25,17 +27,11 @@ export type HeaderProps = {
     url: string;
   };
 
-  image: {
-    alternativeText: string;
-    url: string;
-  };
+  image: Image;
 };
 
 export type SectionAboutProjectProps = {
-  media: {
-    url: string;
-    alternativeText: string;
-  };
+  media: Image;
   title: string;
   description: string;
 };
@@ -45,24 +41,24 @@ export type SectionTechProps = {
   techIcons: TechIcon[];
 };
 
-export type sectionConceptsProps = {
+export type SectionConceptsProps = {
   title: string;
   concepts: Array<{
     title: string;
   }>;
 };
 
-export type sectionModulesProps = {
+export type SectionModulesProps = {
   title: string;
-  modules: Modules[];
+  modules: Module[];
 };
 
-export type sectionAgendaProps = {
+export type SectionAgendaProps = {
   title: string;
   description: string;
 };
 
-export type pricingBoxProps = {
+export type PricingBoxProps = {
   totalPrice: number;
   numberInstallments: number;
   priceInstallment: number;
@@ -73,13 +69,32 @@ export type pricingBoxProps = {
   };
 };
 
+export type SocialLink = {
+  title: string;
+  url: string;
+};
+
+export type Author = {
+  name: string;
+  photo: Image;
+  role: string;
+  description: string;
+  socialLinks?: SocialLink[];
+};
+
+export type SectionAboutUsProps = {
+  title: string;
+  authors: Author[];
+};
+
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
   sectionAboutProject: SectionAboutProjectProps;
   sectionTech: SectionTechProps;
-  sectionConcepts: sectionConceptsProps;
-  sectionModules: sectionModulesProps;
-  sectionAgenda: sectionAgendaProps;
-  pricingBox: pricingBoxProps;
+  sectionConcepts: SectionConceptsProps;
+  sectionModules: SectionModulesProps;
+  sectionAgenda: SectionAgendaProps;
+  pricingBox: PricingBoxProps;
+  sectionAboutUs: SectionAboutUsProps;
 };
